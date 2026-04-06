@@ -1,0 +1,48 @@
+import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
+
+// import { MdEmail } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiGithub } from "react-icons/fi";
+
+function SocialHandle() {
+  const links = [
+    {
+      icon: (
+        <FaXTwitter className="text-stone-400 text-2xl laptop:text-4xl tablet:text-4xl" />
+      ),
+
+      url: "https://x.com/Codey_sis",
+    },
+    {
+      icon: (
+        <FaWhatsapp className="text-stone-400 text-2xl laptop:text-4xl tablet:text-4xl" />
+      ),
+
+      url: "https://wa.me/2349045808495",
+    },
+    {
+      icon: (
+        <FaLinkedin className="text-stone-400 text-2xl laptop:text-4xl tablet:text-4xl" />
+      ),
+
+      url: "https://www.linkedin.com/in/mariam-olayiwola-4bbb1031b/",
+    },
+    {
+      icon: (
+        <FiGithub className="text-stone-400 text-2xl laptop:text-4xl tablet:text-4xl" />
+      ),
+
+      url: "https://github.com/maryham1",
+    },
+  ];
+
+  return (
+    <ul className="flex gap-10 items-center ">
+      {links.map((item, index) => (
+        <li href={item.url}>{item.icon}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default SocialHandle;

@@ -1,0 +1,24 @@
+import Tool from "./Tool";
+
+function Tools() {
+  return (
+    <section className="px-[30px] font-geist flex flex-col item-center gap-10 laptop:px-[70px] tablet:px-[40px]">
+      <div>
+        <h1 className="text-3xl capitalize tablet:text-4xl laptop:text-6xl">
+          my tech stack
+        </h1>
+      </div>
+      <div className="flex flex-col gap-10 justify-normal items-center tablet:flex-row tablet:justify-between laptop:flex-row laptop:justify-between">
+        <Tool />
+        <div className="">
+          <img
+            src="\dev\laptop.jpeg "
+            className="w-[500px] h-[200px] rounded-4xl animate-float2"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Tools;
