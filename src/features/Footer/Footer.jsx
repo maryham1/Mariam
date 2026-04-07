@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer
       ref={contactRef}
-      className="flex flex-col gap-20 font-geist px-[30px] laptop:px-[70px] tablet:p-[40px]"
+      className="flex flex-col gap-20 font-geist py-20 px-[30px] laptop:px-[70px] tablet:p-[40px]"
       id="contact"
     >
       <div className="flex justify-between">

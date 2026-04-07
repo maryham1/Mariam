@@ -21,7 +21,7 @@ function App() {
   ]);
   return (
     <ScrollContextComponent>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </ScrollContextComponent>
   );
 }
