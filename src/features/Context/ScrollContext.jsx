@@ -7,9 +7,11 @@ export function ScrollContextComponent({ children }) {
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
-
+  const heroRef = useRef();
   return (
-    <ScrollContext.Provider value={{ aboutRef, projectRef, contactRef }}>
+    <ScrollContext.Provider
+      value={{ aboutRef, projectRef, contactRef, heroRef }}
+    >
       {children}
     </ScrollContext.Provider>
   );

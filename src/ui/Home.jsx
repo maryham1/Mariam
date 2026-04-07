@@ -5,13 +5,15 @@ import SocialHandle from "../features/Hero/SocialHandle";
 import About from "../features/About/About";
 import Tools from "../features/Tools/Tools";
 import Footer from "../features/Footer/Footer";
+import { useComponent } from "../features/Context/ScrollContext";
 
 function Home() {
+  const { heroRef } = useComponent();
   return (
     <section className="px-[10px]   flex flex-col h-screen justify-betwween laptop:gap-20 tablet:gap-40">
       <header className="flex flex-col items-center gap-15 laptop:gap-0 min-h-screen justify-normal laptop:justify-between tablet:justify-around  ">
-        <Nav />
-        <Hero />
+        <Nav triggerRef={heroRef} />
+        <Hero ref={heroRef} />
         <SocialHandle />
       </header>
       <main className="flex flex-col gap-20">

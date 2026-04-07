@@ -1,3 +1,4 @@
+import { useInView } from "../hook/useInView";
 import LinkButtons from "./LinkButtons";
 import TechStack from "./TechStack";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -15,18 +16,44 @@ function ProjectList({ pj, index }) {
   } = pj;
   const codeLink = pj?.projectCode;
   console.log(pj);
+  const [ref, isVisible] = useInView({
+    threshold: 0.3,
+  });
+
+  let animationClass = "";
+  let imageAnimation = "";
+
+  if (id % 2 === 0) {
+    imageAnimation = isVisible ? "animate-bounce-in" : "opacity-0";
+  } else if (id % 3 === 0) {
+    imageAnimation = isVisible ? "animate-fold-in" : "opacity-0";
+  } else {
+    imageAnimation = isVisible ? "animate-scale" : "opacity-0";
+  }
+
+  if (id % 2 === 0) {
+    animationClass = isVisible ? "animate-fold-in" : "opacity-0";
+  } else if (id % 3 === 0) {
+    animationClass = isVisible ? "animate-slide-in-left" : "opacity-0";
+  } else {
+    animationClass = isVisible ? "animate-bounce-in" : "opacity-0";
+  }
 
   return (
     <div
-      className={`${id / 2 === 0 ? "row-span-0 laptop:row-span-3 tablet:row-span-3" : "row-span-0 laptop:row-span-2 tablet:row-span-2"} ${id === 2 ? "mt-0 laptop:mt-[200px] tablet:mt-[100px] " : ""}  p-[30px] bg-stone-900/50 rounded-4xl w-auto h-auto shadow-xl laptop:w-auto`}
+      className={`${id / 2 === 0 ? "row-span-0 laptop:row-span-3 tablet:row-span-3" : "row-span-0 laptop:row-span-2 tablet:row-span-2"} ${id === 2 ? "mt-0 laptop:mt-[200px] tablet:mt-[100px] " : ""}  
+      p-[30px] bg-stone-900/50 rounded-4xl w-auto h-auto shadow-xl laptop:w-auto ${animationClass}  transition-all duration-700 ease-out`}
+      ref={ref}
     >
       {/* <img src={projectImage} className="rounded-2xl" /> */}
-      <LazyLoadImage
-        src={projectImage}
-        className="rounded-2xl"
-        effect="blur"
-        alt="project"
-      />
+      <div ref={ref} className={`${imageAnimation} `}>
+        <LazyLoadImage
+          src={projectImage}
+          className={`rounded-2xl`}
+          effect="blur"
+          alt="project"
+        />
+      </div>
 
       <div className=" flex flex-col gap-5 laptop:gap-10 mt-10">
         <div className="space-y-2">

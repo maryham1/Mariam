@@ -1,11 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavList from "./NavList";
 import ShowMenu from "./ShowMenu";
+import { useComponent } from "../features/Context/ScrollContext";
 
-function Nav() {
+function Nav({ triggerRef }) {
   const [open, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSticky(!entry.isIntersecting);
+      },
+      {
+        threshold: 0, // trigger as soon as it leaves
+      },
+    );
+
+    if (triggerRef.current) {
+      observer.observe(triggerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [triggerRef]);
+
   return (
-    <nav className="bg-transparent relative z-50 border border-[1px]  border-gray-500/50 py-[10px] px-[20px] w-[300px] rounded-full tablet:w-[600px] laptop:w-[600px] laptop:py-[15px] laptop:px-[30px] tablet:py-[15px] tablet:px-[30px]">
+    <nav
+      className={`bg-transparent z-50 border border-[1px] border-gray-500/50 py-[10px] px-[20px] w-[300px] rounded-full 
+      tablet:w-[600px] laptop:w-[600px] laptop:py-[15px] laptop:px-[30px] tablet:py-[15px] tablet:px-[30px]
+      ${isSticky ? "fixed top-5 left-1/2 -translate-x-1/2 backdrop-blur-md bg-black/30" : "relative"}
+      `}
+    >
       <div className="flex justify-between ">
         <NavList open={open} setIsOpen={setIsOpen} />
         <ShowMenu open={open} setIsOpen={setIsOpen} />

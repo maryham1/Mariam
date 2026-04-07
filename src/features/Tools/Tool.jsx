@@ -1,3 +1,5 @@
+import { useInView } from "../hook/useInView";
+
 const tools = [
   {
     img: "/Tool/react.svg",
@@ -25,10 +27,22 @@ const tools = [
   },
 ];
 function Tool() {
+  const [ref, isVisible] = useInView({
+    threshold: 0.3,
+  });
   return (
-    <div className="bg-stone-900/50 rounded-4xl w-auto h-auto shadow-xl p-10 flex flex-row flex-wrap gap-20 laptop:w-[400px]">
-      {tools.map((tool) => (
-        <div className="flex gap-2 items-center">
+    <div
+      ref={ref}
+      className={` bg-stone-900/50 rounded-4xl w-auto h-auto shadow-xl p-10 flex flex-row flex-wrap gap-20 laptop:w-[400px] `}
+    >
+      {tools.map((tool, index) => (
+        <div
+          className={`transition-all duration-700 ease-out
+      ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} flex gap-2 items-center`}
+          style={{
+            transitionDelay: `${index * 150}ms`,
+          }}
+        >
           <img
             src={tool.img}
             className="w-[30px] h-[30px] laptop:w-[50px] laptop:h-[50px]"

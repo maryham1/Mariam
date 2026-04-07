@@ -3,8 +3,12 @@ import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
 // import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
+import { useInView } from "../hook/useInView";
 
 function SocialHandle() {
+  const [ref, isVisible] = useInView({
+    threshold: 0.3,
+  });
   const links = [
     {
       icon: (
@@ -37,7 +41,10 @@ function SocialHandle() {
   ];
 
   return (
-    <ul className="flex gap-10 items-center ">
+    <ul
+      className={`${isVisible ? "animate-slide-in-left" : "opacity-0"} transition-all duration-700 ease-in-out flex gap-10 items-center`}
+      ref={ref}
+    >
       {links.map((item, index) => (
         <li>
           <a href={item.url}>{item.icon}</a>
