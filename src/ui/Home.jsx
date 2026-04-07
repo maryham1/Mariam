@@ -14,7 +14,7 @@ function Home() {
         <Hero />
         <SocialHandle />
       </header>
-      <main className="flex flex-col gap-20">
+      <main className="flex flex-col gap-20 border-0">
         <Outlet />
         <About />
         <Tools />
