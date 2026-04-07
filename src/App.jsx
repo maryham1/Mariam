@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Loader as projectLoader } from "./features/Projects/Projects";
 
-import Projects from "./features/Projects/Projects";
 import Home from "./ui/Home";
 import { ScrollContextComponent } from "./features/Context/ScrollContext";
+import Projects from "./features/Projects/Projects";
 
 function App() {
   const router = createBrowserRouter([

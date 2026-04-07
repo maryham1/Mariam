@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import { getProject } from "../../service/projectApi";
-import ProjectList from "./ProjectList";
-import { useComponent } from "../Context/ScrollContext";
 
+import { useComponent } from "../Context/ScrollContext";
+import ProjectList from "./ProjectList";
 function Projects() {
   const projects = useLoaderData();
   console.log(projects);
@@ -25,7 +25,7 @@ function Projects() {
 
         <>
           {projects.map((pj, index) => (
-            <ProjectList pj={pj} index={index} key={pj.id} />
+            <ProjectList pj={pj} key={pj.id} />
           ))}
         </>
       </div>
