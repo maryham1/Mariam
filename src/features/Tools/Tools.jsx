@@ -1,4 +1,6 @@
 import Tool from "./Tool";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Tools() {
   return (
@@ -11,9 +13,15 @@ function Tools() {
       <div className="flex flex-col gap-10 justify-normal items-center tablet:flex-row tablet:justify-between laptop:flex-row laptop:justify-between">
         <Tool />
         <div className="">
-          <img
+          {/* <img
             src="\dev\laptop.jpeg "
             className="w-[500px] h-[200px] rounded-4xl animate-float2"
+          /> */}
+          <LazyLoadImage
+            src="\dev\laptop.jpeg "
+            className="w-[500px] h-[200px] rounded-4xl animate-float2"
+            effect="blur"
+            alt="project"
           />
         </div>
       </div>

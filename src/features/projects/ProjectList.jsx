@@ -1,5 +1,7 @@
 import LinkButtons from "./LinkButtons";
 import TechStack from "./TechStack";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function ProjectList({ pj, index }) {
   const {
@@ -16,9 +18,15 @@ function ProjectList({ pj, index }) {
 
   return (
     <div
-      className={`${id / 2 === 0 ? "row-span-0 laptop:row-span-3 tablet:row-span-3" : "row-span-0 laptop:row-span-2 tablet:row-span-2"} ${id === 2 ? "mt-0 laptop:mt-[200px] tablet:mt-[100px] " : ""}  p-[30px] bg-stone-900/30 rounded-4xl w-auto h-auto shadow-xl laptop:w-auto`}
+      className={`${id / 2 === 0 ? "row-span-0 laptop:row-span-3 tablet:row-span-3" : "row-span-0 laptop:row-span-2 tablet:row-span-2"} ${id === 2 ? "mt-0 laptop:mt-[200px] tablet:mt-[100px] " : ""}  p-[30px] bg-stone-900/50 rounded-4xl w-auto h-auto shadow-xl laptop:w-auto`}
     >
-      <img src={projectImage} className="rounded-2xl" />
+      {/* <img src={projectImage} className="rounded-2xl" /> */}
+      <LazyLoadImage
+        src={projectImage}
+        className="rounded-2xl"
+        effect="blur"
+        alt="project"
+      />
 
       <div className=" flex flex-col gap-5 laptop:gap-10 mt-10">
         <div className="space-y-2">

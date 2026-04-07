@@ -8,13 +8,13 @@ import Footer from "../features/Footer/Footer";
 
 function Home() {
   return (
-    <section className="flex flex-col h-screen justify-betwween laptop:gap-20 tablet:gap-40">
+    <section className="px-[40px] tablet:px-[50px] laptop:px-[70px] flex flex-col h-screen justify-betwween laptop:gap-20 tablet:gap-40">
       <header className="flex flex-col items-center gap-15 laptop:gap-0 min-h-screen justify-normal laptop:justify-between tablet:justify-around  ">
         <Nav />
         <Hero />
         <SocialHandle />
       </header>
-      <main className="flex flex-col gap-20 border-0">
+      <main className="flex flex-col gap-20">
         <Outlet />
         <About />
         <Tools />

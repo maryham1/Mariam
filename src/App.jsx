@@ -3,6 +3,7 @@ import { Loader as projectLoader } from "./features/Projects/Projects";
 
 import Projects from "./features/Projects/Projects";
 import Home from "./ui/Home";
+import { ScrollContextComponent } from "./features/Context/ScrollContext";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,7 +19,11 @@ function App() {
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <ScrollContextComponent>
+      <RouterProvider router={router} />;
+    </ScrollContextComponent>
+  );
 }
 
 export default App;

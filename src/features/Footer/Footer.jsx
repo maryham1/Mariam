@@ -1,8 +1,11 @@
+import { useComponent } from "../Context/ScrollContext";
 import SocialHandle from "../Hero/SocialHandle";
 
 function Footer() {
+  const { contactRef } = useComponent();
   return (
     <footer
+      ref={contactRef}
       className="flex flex-col gap-20 font-geist px-[30px] laptop:px-[70px] tablet:p-[40px]"
       id="contact"
     >

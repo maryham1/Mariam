@@ -14,7 +14,7 @@ function Hero() {
       </h1>
       <NameIntro />
       <div className="absolute bottom-0 tablet:top-170 tablet:h-[15px] laptop:bottom-10  h-[10px] text-center w-[300px] laptop:h-[15px] bg-[#6741ed] blur-3xl rounded-full translate-y-1/2"></div>
-      <p className="font-geist text-lg w-auto text-center text-stone-100 tablet:text-2xl tablet:w-[700px] laptop:text-xl laptop:w-[700px]">
+      <p className="font-geist text-lg w-auto text-center text-stone-200 tablet:text-2xl tablet:w-[700px] laptop:text-xl laptop:w-[700px]">
         I’m a Frontend Developer focused on crafting clean, functional, dynamic
         and responsive web experiences using React, Supabase, Redux and Tailwind
         CSS.

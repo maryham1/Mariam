@@ -1,6 +1,12 @@
+import { useComponent } from "../Context/ScrollContext";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 function About() {
+  const { aboutRef } = useComponent();
   return (
     <section
+      ref={aboutRef}
       className="px-[30px] flex flex-col gap-10 laptop:px-[70px] tablet:40px"
       id="about"
     >
@@ -10,7 +16,7 @@ function About() {
         </h1>
       </div>
       <div className="flex flex-col justify-normal gap-10 tablet:flex-row tablet:justify-between tablet:items-center tablet:gap-0 laptop:flex-row laptop:justify-between laptop:items-center laptop:gap-0">
-        <div className="bg-stone-900/30 rounded-4xl w-auto h-auto shadow-xl p-7 font-geist text-lg text-stone-400 space-y-5 laptop:space-y-10 tablet:w-[400px] tablet:text-xl laptop:w-[700px] laptop:text-2xl">
+        <div className="bg-stone-900/50 rounded-4xl w-auto h-auto shadow-xl p-7 font-geist text-lg text-stone-400 space-y-5 laptop:space-y-10 tablet:w-[400px] tablet:text-xl laptop:w-[700px] laptop:text-2xl">
           <p className="">
             I build modern, responsive web applications using React, React
             Router, Redux, Tailwind CSS, and Supabase—focusing on performance,
@@ -35,9 +41,15 @@ function About() {
           </p>
         </div>
         <div>
-          <img
+          {/* <img
             src="\dev\mariam.jpeg"
             className="rounded-4xl w-[400px] h-[500px] laptop:w-[400px] laptop:h-[700px] tablet:w-[300px] tablet:h-[400px]"
+          /> */}
+          <LazyLoadImage
+            src="\dev\mariam.jpeg"
+            className="rounded-4xl w-[400px] h-[500px] laptop:w-[400px] laptop:h-[700px] tablet:w-[300px] tablet:h-[400px]"
+            effect="blur"
+            alt="project"
           />
         </div>
       </div>

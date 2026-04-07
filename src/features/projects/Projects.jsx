@@ -1,12 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import { getProject } from "../../service/projectApi";
 import ProjectList from "./ProjectList";
+import { useComponent } from "../Context/ScrollContext";
 
 function Projects() {
   const projects = useLoaderData();
   console.log(projects);
+  const { projectRef } = useComponent();
   return (
     <section
+      ref={projectRef}
       className="px-[30px] laptop:px-[70px] tablet:px-[40px]"
       id="projects"
     >

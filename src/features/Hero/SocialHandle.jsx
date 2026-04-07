@@ -39,7 +39,9 @@ function SocialHandle() {
   return (
     <ul className="flex gap-10 items-center ">
       {links.map((item, index) => (
-        <li href={item.url}>{item.icon}</li>
+        <li>
+          <a href={item.url}>{item.icon}</a>
+        </li>
       ))}
     </ul>
   );
