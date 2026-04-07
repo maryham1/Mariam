@@ -31,7 +31,7 @@ function ProjectList({ pj, index }) {
       <div className=" flex flex-col gap-5 laptop:gap-10 mt-10">
         <div className="space-y-2">
           <h1 className="text-3xl font-geist capitalize">{projectName}</h1>
-          <p className="font-geist text-lg text-stone-400">
+          <p className="font-geist text-sm text-stone-400">
             {projectDescription}
           </p>
         </div>
