@@ -7,7 +7,7 @@ import { useInView } from "../hook/useInView";
 
 function SocialHandle() {
   const [ref, isVisible] = useInView({
-    threshold: 0.3,
+    threshold: 0.6,
   });
   const links = [
     {
