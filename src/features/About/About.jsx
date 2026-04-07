@@ -6,7 +6,7 @@ import { useInView } from "../hook/useInView";
 function About() {
   const { aboutRef } = useComponent();
   const [ref, isVisible] = useInView({
-    threshold: 0.7,
+    threshold: 0.3,
   });
   return (
     <section
@@ -20,7 +20,7 @@ function About() {
           </h1>
         </div>
         <div
-          className={` ${isVisible ? "animate-slide-in-left" : "opacity-0"} transition-all duration-700 ease-in-out flex flex-col justify-normal gap-10 tablet:flex-row tablet:justify-between tablet:items-center tablet:gap-0 laptop:flex-row laptop:justify-between laptop:items-center laptop:gap-0`}
+          className={` ${isVisible ? "animate-slide-in-left opacity-100 translate-y-0" : "translate-y-20 opacity-0"} transition-all duration-700 ease-in-out flex flex-col justify-normal gap-10 tablet:flex-row tablet:justify-between tablet:items-center tablet:gap-0 laptop:flex-row laptop:justify-between laptop:items-center laptop:gap-0`}
           ref={ref}
         >
           <div className="bg-stone-900/50 rounded-4xl w-auto h-auto shadow-xl p-7 font-geist text-lg text-stone-400 space-y-5 laptop:space-y-10 tablet:w-[400px] tablet:text-xl laptop:w-[700px] laptop:text-2xl">
@@ -54,7 +54,7 @@ function About() {
           /> */}
             <div
               ref={ref}
-              className={`${isVisible ? "animate-scale" : "opacity-0"} transition-all duration-700 ease-in-out`}
+              className={`${isVisible ? "animate-scale opacity-100 translate-y-0" : "translate-y-20 opacity-0"} transition-all duration-700 ease-in-out`}
             >
               <LazyLoadImage
                 src="\dev\mariam.jpeg"

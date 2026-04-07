@@ -24,19 +24,31 @@ function ProjectList({ pj, index }) {
   let imageAnimation = "";
 
   if (id % 2 === 0) {
-    imageAnimation = isVisible ? "animate-bounce-in" : "opacity-0";
+    imageAnimation = isVisible
+      ? "animate-bounce-in opacity-100 translate-y-0"
+      : "opacity-0 pacity-0 translate-y-20";
   } else if (id % 3 === 0) {
-    imageAnimation = isVisible ? "animate-fold-in" : "opacity-0";
+    imageAnimation = isVisible
+      ? "animate-fold-in opacity-100 translate-y-0"
+      : "opacity-0 pacity-0 translate-y-20";
   } else {
-    imageAnimation = isVisible ? "animate-scale" : "opacity-0";
+    imageAnimation = isVisible
+      ? "animate-scale opacity-100 translate-y-0"
+      : "opacity-0 pacity-0 translate-y-20";
   }
 
   if (id % 2 === 0) {
-    animationClass = isVisible ? "animate-fold-in" : "opacity-0";
+    animationClass = isVisible
+      ? "animate-fold-in opacity-100 translate-y-0"
+      : "opacity-0 pacity-0 translate-y-20";
   } else if (id % 3 === 0) {
-    animationClass = isVisible ? "animate-slide-in-left" : "opacity-0";
+    animationClass = isVisible
+      ? "animate-slide-in-left opacity-100 translate-y-0"
+      : "opacity-0 pacity-0 translate-y-20";
   } else {
-    animationClass = isVisible ? "animate-bounce-in" : "opacity-0";
+    animationClass = isVisible
+      ? "animate-bounce-in opacity-100 translate-y-0"
+      : "opacity-0 pacity-0 translate-y-20";
   }
 
   return (

@@ -24,6 +24,7 @@ function Tools() {
             src="\dev\laptop.jpeg "
             className="w-[500px] h-[200px] rounded-4xl animate-float2"
           /> */}
+
           <div
             className={`${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"} transition-all duration-700 ease-in-out`}
             ref={ref}

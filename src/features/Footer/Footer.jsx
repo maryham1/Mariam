@@ -22,7 +22,7 @@ function Footer() {
       >
         <div className="flex justify-between">
           <div
-            className={`${isVisible ? "animate-slide-in-left" : "opacity-0"} transition-all duration-700 ease-in-out`}
+            className={`${isVisible ? "animate-slide-in-left opacity-100 translate-y-0" : "opacity-0 translate-y-20"} transition-all duration-700 ease-in-out`}
           >
             <h1 className="text-3xl tracking-[-1px] tablet:text-4xl tablet:tracking-[-1px] laptop:tracking-[-6px] laptop:text-7xl">
               Slide in
