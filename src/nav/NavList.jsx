@@ -1,15 +1,22 @@
 import { useComponent } from "../features/Context/ScrollContext";
 
-function NavList({ open, setIsOpen }) {
+function NavList({ open, setIsOpen, isSticky, setIsSticky }) {
   const { projectRef } = useComponent();
   const { aboutRef } = useComponent();
   const { contactRef } = useComponent();
   return (
     <ul
-      className={`${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 "}
-       z-50 flex-col flex gap-20 fixed top-0 px-10 py-20 left-0  transition-all duration-800 ease-in-out h-screen  w-full bg-black  items-start  font-geist text-xl 
-       laptop:static laptop:translate-y-0 laptop:opacity-100 laptop:w-[400px] laptop:flex laptop:flex-row tablet:flex-row tablet:py-0 tablet:flex laptop:bg-transparent tablet:bg-transparent laptop:py-0 laptop:relative laptop:gap-0 tablet:gap-0 laptop:h-auto laptop:justify-around tablet:justify-around laptop:items-center tablet:items-center laptop:px-0 tablet:px-0
-        tablet:w-[400px] tablet:h-auto tablet:static tablet:translate-y-0 tablet:opacity-100`}
+      className={`
+    fixed top-0 left-0 w-screen h-screen z-40
+    flex flex-col gap-20 px-10 py-20
+    bg-amber-800 text-xl font-geist
+    transition-all duration-500 ease-in-out
+${isSticky ? "ml-[-51px] top-[-20px]" : ""}
+    ${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 "}
+
+    laptop:static laptop:flex-row laptop:h-auto laptop:opacity-100 laptop:translate-y-0 laptop:bg-transparent
+    tablet:flex-row tablet:h-auto tablet:opacity-100 tablet:translate-y-0 tablet:bg-transparent
+  `}
     >
       <li
         onClick={(e) => {

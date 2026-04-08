@@ -10,7 +10,7 @@ import { useComponent } from "../features/Context/ScrollContext";
 function Home() {
   const { heroRef } = useComponent();
   return (
-    <section className="px-[10px]   flex flex-col h-screen justify-betwween laptop:gap-20 tablet:gap-40">
+    <section className="px-[10px]   flex flex-col h-screen justify-between laptop:gap-20 tablet:gap-40">
       <header className="flex flex-col items-center gap-15 laptop:gap-0 min-h-screen justify-normal laptop:justify-between tablet:justify-around  ">
         <Nav triggerRef={heroRef} />
 

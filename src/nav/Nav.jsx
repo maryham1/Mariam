@@ -26,14 +26,19 @@ function Nav({ triggerRef }) {
 
   return (
     <nav
-      className={`bg-transparent z-50 border border-[1px] border-gray-500/50 py-[10px] px-[20px] w-[300px] rounded-full 
+      className={`bg-transparent z-50 border border-[1px]  border-gray-500/50 py-[10px] px-[20px] w-[300px] rounded-full 
       tablet:w-[600px] laptop:w-[600px] laptop:py-[15px] laptop:px-[30px] tablet:py-[15px] tablet:px-[30px]
       ${isSticky ? "fixed top-5 left-1/2 -translate-x-1/2 backdrop-blur-md bg-black/30" : "relative"}
       `}
     >
-      <div className="flex justify-between ">
-        <NavList open={open} setIsOpen={setIsOpen} />
-        <ShowMenu open={open} setIsOpen={setIsOpen} />
+      <div className={` flex justify-between`}>
+        <NavList
+          open={open}
+          setIsOpen={setIsOpen}
+          isSticky={isSticky}
+          setIsSticky={setIsSticky}
+        />
+        <ShowMenu open={open} setIsOpen={setIsOpen} isSticky={isSticky} />
         <button className="block bg-[#6741ed] rounded-2xl px-4 py-3 text-center hover:border-b-6 hover:border-purple-300">
           <a href="mailto:mariamolayiwola89@gmail.com" className="pointer">
             Let's work 💻

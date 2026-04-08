@@ -1,5 +1,5 @@
 import { HiBars3, HiMiniXMark } from "react-icons/hi2";
-function ShowMenu({ open, setIsOpen }) {
+function ShowMenu({ open, setIsOpen, isSticky }) {
   return (
     <button
       className="block laptop:hidden tablet:hidden z-[100] transition-all duration-300 ease-in-out"
@@ -7,7 +7,9 @@ function ShowMenu({ open, setIsOpen }) {
     >
       <span>
         {open ? (
-          <HiMiniXMark className="text-4xl font-bold absolute right-0 top-[-10px] " />
+          <HiMiniXMark
+            className={`text-4xl font-bold absolute right-0 top-[-10px] ${isSticky ? "top-[20px]" : ""} `}
+          />
         ) : (
           <HiBars3 className="text-2xl font-bold " />
         )}

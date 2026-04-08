@@ -10,7 +10,7 @@ function Projects() {
   return (
     <section
       ref={projectRef}
-      className="px-[30px] laptop:px-[70px] tablet:px-[40px]"
+      className="px-[30px] laptop:px-[70px] tablet:px-[40px] scroll-mt-[-20px]"
       id="projects"
     >
       <div className="grid grid-cols-1 grid-row-5 gap-x-[30px] gap-y-10   items-center tablet:grid-cols-2 tablet:gap-y-20 tablet:gap-x-10 tablet:items-start laptop:grid-cols-2 laptop:gap-y-50 laptop:gap-x-10">
