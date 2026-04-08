@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer
       ref={contactRef}
-      className=" font-geist py-20 px-[30px] laptop:px-[70px] tablet:p-[40px] scroll-mt-[-20px]"
+      className=" font-geist py-20 px-[30px] laptop:px-[70px] tablet:p-[40px] "
       id="contact"
     >
       <div

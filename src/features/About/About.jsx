@@ -11,7 +11,7 @@ function About() {
   });
   return (
     <section
-      className={`${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"} transition-all duration-700 ease-in-out px-[30px] laptop:px-[70px] tablet:40px scroll-mt-[-20px]`}
+      className={`${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"} transition-all duration-700 ease-in-out px-[30px] laptop:px-[70px] tablet:40px `}
       id="about"
     >
       <div ref={aboutRef} className="flex flex-col gap-10 ">

@@ -9,9 +9,9 @@ function NavList({ open, setIsOpen, isSticky, setIsSticky }) {
       className={`
     fixed top-0 left-0 w-screen h-screen z-40
     flex flex-col gap-20 px-10 py-20
-    bg-amber-800 text-xl font-geist
+    bg-black text-xl font-geist
     transition-all duration-500 ease-in-out
-${isSticky ? "ml-[-51px] top-[-20px]" : ""}
+${isSticky ? "ml-[-60px] mt-[-20px]" : ""}
     ${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 "}
 
     laptop:static laptop:flex-row laptop:h-auto laptop:opacity-100 laptop:translate-y-0 laptop:bg-transparent
