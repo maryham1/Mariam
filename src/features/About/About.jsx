@@ -2,11 +2,12 @@ import { useComponent } from "../Context/ScrollContext";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { useInView } from "../hook/useInView";
+import { BiReflectHorizontal } from "react-icons/bi";
 
 function About() {
   const { aboutRef } = useComponent();
   const [ref, isVisible] = useInView({
-    threshold: 0.3,
+    threshold: 0.15,
   });
   return (
     <section
@@ -23,7 +24,10 @@ function About() {
           className={` ${isVisible ? "animate-slide-in-left opacity-100 translate-y-0" : "translate-y-20 opacity-0"} transition-all duration-700 ease-in-out flex flex-col justify-normal gap-10 tablet:flex-row tablet:justify-between tablet:items-center tablet:gap-0 laptop:flex-row laptop:justify-between laptop:items-center laptop:gap-0`}
           ref={ref}
         >
-          <div className="bg-stone-900/50 rounded-4xl w-auto h-auto shadow-xl p-7 font-geist text-lg text-stone-400 space-y-5 laptop:space-y-10 tablet:w-[400px] tablet:text-xl laptop:w-[700px] laptop:text-2xl">
+          <div
+            className="bg-stone-900/50 rounded-4xl w-auto h-auto shadow-xl p-7 font-geist text-lg text-stone-400 space-y-5 laptop:space-y-10 tablet:w-[400px] tablet:text-xl laptop:w-[700px] laptop:text-2xl"
+            ref={ref}
+          >
             <p className="">
               I build modern, responsive web applications using React, React
               Router, Redux, Tailwind CSS, and Supabase—focusing on performance,
@@ -52,13 +56,10 @@ function About() {
             src="\dev\mariam.jpeg"
             className="rounded-4xl w-[400px] h-[500px] laptop:w-[400px] laptop:h-[700px] tablet:w-[300px] tablet:h-[400px]"
           /> */}
-            <div
-              ref={ref}
-              className={`${isVisible ? "animate-scale opacity-100 translate-y-0" : "translate-y-20 opacity-0"} transition-all duration-700 ease-in-out`}
-            >
+            <div ref={ref}>
               <LazyLoadImage
                 src="\dev\mariam.jpeg"
-                className="rounded-4xl w-[400px] h-[500px] laptop:w-[400px] laptop:h-[700px] tablet:w-[300px] tablet:h-[400px]"
+                className={`${isVisible ? "animate-scale opacity-100 translate-y-0" : " translate-y-20 opacity-0"} transition-all duration-700 ease-in-out rounded-4xl w-[400px] h-[500px] laptop:w-[400px] laptop:h-[700px] tablet:w-[300px] tablet:h-[400px]`}
                 effect="blur"
                 alt="project"
               />

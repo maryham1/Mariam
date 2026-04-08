@@ -37,6 +37,7 @@ function Tool() {
     >
       {tools.map((tool, index) => (
         <div
+          ref={ref}
           className={`transition-all duration-700 ease-out
       ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"} flex gap-2 items-center`}
           style={{

@@ -7,7 +7,7 @@ function NavList({ open, setIsOpen }) {
   return (
     <ul
       className={`${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 "}
-       z-50 flex-col flex gap-20 fixed top-40 px-10 py-20 left-0  transition-all duration-500 ease-in-out h-screen  w-full bg-amber-800  items-start  font-geist text-xl 
+       z-50 flex-col flex gap-20 fixed top-0 px-10 py-20 left-0  transition-all duration-800 ease-in-out h-screen  w-full bg-black  items-start  font-geist text-xl 
        laptop:static laptop:translate-y-0 laptop:opacity-100 laptop:w-[400px] laptop:flex laptop:flex-row tablet:flex-row tablet:py-0 tablet:flex laptop:bg-transparent tablet:bg-transparent laptop:py-0 laptop:relative laptop:gap-0 tablet:gap-0 laptop:h-auto laptop:justify-around tablet:justify-around laptop:items-center tablet:items-center laptop:px-0 tablet:px-0
         tablet:w-[400px] tablet:h-auto tablet:static tablet:translate-y-0 tablet:opacity-100`}
     >

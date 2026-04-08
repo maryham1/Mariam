@@ -13,7 +13,8 @@ function Home() {
     <section className="px-[10px]   flex flex-col h-screen justify-betwween laptop:gap-20 tablet:gap-40">
       <header className="flex flex-col items-center gap-15 laptop:gap-0 min-h-screen justify-normal laptop:justify-between tablet:justify-around  ">
         <Nav triggerRef={heroRef} />
-        <Hero ref={heroRef} />
+
+        <Hero />
         <SocialHandle />
       </header>
       <main className="flex flex-col gap-20">

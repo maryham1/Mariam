@@ -1,10 +1,15 @@
+import { useComponent } from "../Context/ScrollContext";
 import NameIntro from "./NameIntro";
 import Patterns from "./Patterns";
 import SocialHandle from "./SocialHandle";
 
 function Hero() {
+  const { heroRef } = useComponent();
   return (
-    <section className="flex flex-col items-center gap-5 px-[30px]">
+    <section
+      className="flex flex-col items-center gap-5 px-[30px]"
+      ref={heroRef}
+    >
       <Patterns />
       <div className="bg-gray-300 rounded-md p-[4px] animate-rotateZoom ">
         <img src="\Avatar\girl.svg" className="h-10 w-10 " />

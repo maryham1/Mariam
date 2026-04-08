@@ -25,13 +25,10 @@ function Tools() {
             className="w-[500px] h-[200px] rounded-4xl animate-float2"
           /> */}
 
-          <div
-            className={`${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"} transition-all duration-700 ease-in-out`}
-            ref={ref}
-          >
+          <div ref={ref}>
             <LazyLoadImage
               src="\dev\laptop.jpeg "
-              className="w-[500px] h-[200px] rounded-4xl animate-float2"
+              className={`${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"} transition-all duration-700 ease-in-out w-[500px] h-[200px] rounded-4xl animate-float2`}
               effect="blur"
               alt="project"
             />
