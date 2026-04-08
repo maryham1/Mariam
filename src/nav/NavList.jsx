@@ -11,11 +11,11 @@ function NavList({ open, setIsOpen, isSticky, setIsSticky }) {
     flex flex-col gap-20 px-10 py-20
     bg-black text-xl font-geist
     transition-all duration-500 ease-in-out
-${isSticky ? "ml-[-60px] mt-[-20px]" : ""}
+${isSticky ? "laptop:ml-0 laptop:mt-0 tablet:ml-0 tablet:mt-0 ml-[-60px] mt-[-20px]" : ""}
     ${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 "}
 
-    tablet:py-0 tablet:px-0 tablet:gap-0 tablet:justify-between tablet:items-center tablet:w-[400px]
-    laptop:py-0 laptop:px-0 laptop:gap-0 laptop:justify-between laptop:items-center laptop:w-[400px] laptop:static laptop:flex-row laptop:h-auto laptop:opacity-100 laptop:translate-y-0 laptop:bg-transparent
+    tablet:py-0 tablet:px-0 tablet:gap-0 tablet:justify-around tablet:items-center tablet:w-[400px]
+    laptop:py-0 laptop:px-0 laptop:gap-0 laptop:justify-around laptop:items-center laptop:w-[400px] laptop:static laptop:flex-row laptop:h-auto laptop:opacity-100 laptop:translate-y-0 laptop:bg-transparent
     tablet:static tablet:flex-row tablet:h-auto tablet:opacity-100 tablet:translate-y-0 tablet:bg-transparent
   `}
     >

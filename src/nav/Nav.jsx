@@ -28,7 +28,7 @@ function Nav({ triggerRef }) {
     <nav
       className={`bg-transparent z-50 border border-[1px]  border-gray-500/50 py-[10px] px-[20px] w-[300px] rounded-full 
       tablet:w-[600px] laptop:w-[600px] laptop:py-[15px] laptop:px-[30px] tablet:py-[15px] tablet:px-[30px]
-      ${isSticky ? "fixed top-5 left-1/2 -translate-x-1/2 backdrop-blur-md bg-black/30" : "relative"}
+      ${isSticky ? " fixed top-5 left-1/2 -translate-x-1/2 backdrop-blur-md bg-black/30" : "relative"}
       `}
     >
       <div className={` flex justify-between`}>
