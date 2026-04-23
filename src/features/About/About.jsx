@@ -38,8 +38,9 @@ function About() {
               I’ve worked on a variety of projects, from interactive quiz apps
               and dictionary tools to full UI experiences like a space tourism
               website and a task management platform. I’ve also built functional
-              applications like a dessert ordering app and a car wash service
-              site, combining practical features with user-friendly interfaces.
+              applications like a dessert ordering app, a car wash service site,
+              and a legal services website for a law firm—combining practical
+              features with user-friendly interfaces.
             </p>
             <p>
               {" "}
@@ -59,7 +60,7 @@ function About() {
             <div ref={ref}>
               <LazyLoadImage
                 src="\dev\mariam.jpeg"
-                className={`${isVisible ? "animate-scale opacity-100 translate-y-0" : " translate-y-20 opacity-0"} transition-all duration-700 ease-in-out rounded-4xl w-[400px] h-[500px] laptop:w-[400px] laptop:h-[700px] tablet:w-[300px] tablet:h-[400px]`}
+                className={`${isVisible ? "animate-scale opacity-100 translate-y-0" : " translate-y-20 opacity-0"} transition-all duration-700 ease-in-out rounded-4xl w-[400px] h-[500px] laptop:w-[400px] laptop:h-[700px] tablet:w-[300px] tablet:h-[400px] object-cover`}
                 effect="blur"
                 alt="project"
               />

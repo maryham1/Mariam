@@ -26,21 +26,21 @@ function ProjectList({ pj, index }) {
   if (id % 2 === 0) {
     imageAnimation = isVisible
       ? "animate-bounce-in opacity-100 translate-y-0"
-      : "opacity-0 pacity-0 translate-y-20";
+      : "opacity-0  translate-y-20";
   } else if (id % 3 === 0) {
     imageAnimation = isVisible
       ? "animate-fold-in opacity-100 translate-y-0"
-      : "opacity-0 pacity-0 translate-y-20";
+      : "opacity-0 translate-y-20";
   } else {
     imageAnimation = isVisible
       ? "animate-scale opacity-100 translate-y-0"
-      : "opacity-0 pacity-0 translate-y-20";
+      : "opacity-0  translate-y-20";
   }
 
   if (id % 2 === 0) {
     animationClass = isVisible
       ? "animate-fold-in opacity-100 translate-y-0"
-      : "opacity-0 pacity-0 translate-y-20";
+      : "opacity-0  translate-y-20";
   } else if (id % 3 === 0) {
     animationClass = isVisible
       ? "animate-slide-in-left opacity-100 translate-y-0"
