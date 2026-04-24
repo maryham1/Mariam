@@ -33,7 +33,7 @@ ${isSticky ? "laptop:ml-0 laptop:mt-0 tablet:ml-0 tablet:mt-0 ml-[-60px] mt-[-20
       </li>
       <li className="hidden bg-white w-[2px] h-2  text-sm laptop:inline-block tablet:inline-block"></li>
       <li onClick={() => setIsOpen(false)}>
-        <a href="\File\OLAYIWOLA MARIAM RESUME.pdf" className="group relative">
+        <a href="/File/OLAYIWOLA-MARIAM-RESUME.pdf" className="group relative">
           Resume
           <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
         </a>
