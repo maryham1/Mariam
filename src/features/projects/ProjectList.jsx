@@ -6,15 +6,15 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 function ProjectList({ pj, index }) {
   const {
-    id,
-    projectImage,
-    projectURL,
-    projectName,
-    projectCode,
-    techStack,
-    projectDescription,
-  } = pj;
-  const codeLink = pj?.projectCode;
+    id = 0,
+    projectImage = "",
+    projectURL = "",
+    projectName = "",
+    projectCode = "",
+    techStack = [],
+    projectDescription = "",
+  } = pj || {};
+  const codeLink = projectCode;
   console.log(pj);
   const [ref, isVisible] = useInView({
     threshold: 0.3,
@@ -58,32 +58,40 @@ function ProjectList({ pj, index }) {
       ref={ref}
     >
       {/* <img src={projectImage} className="rounded-2xl" /> */}
-      <div ref={ref} className={`${imageAnimation} `}>
-        <LazyLoadImage
-          src={projectImage}
-          className={`rounded-2xl`}
-          effect="blur"
-          alt="project"
-        />
-      </div>
+      {projectImage && (
+        <div ref={ref} className={`${imageAnimation} `}>
+          <LazyLoadImage
+            src={projectImage}
+            className={`rounded-2xl`}
+            effect="blur"
+            alt="project"
+          />
+        </div>
+      )}
 
       <div className=" flex flex-col gap-5 laptop:gap-10 mt-10">
         <div className="space-y-2">
-          <h1 className="text-3xl font-geist capitalize">{projectName}</h1>
-          <p className="font-geist text-sm text-stone-400">
-            {projectDescription}
-          </p>
+          {projectName && (
+            <h1 className="text-3xl font-geist capitalize">{projectName}</h1>
+          )}
+          {projectDescription && (
+            <p className="font-geist text-sm text-stone-400">
+              {projectDescription}
+            </p>
+          )}
         </div>
         <ul className="flex gap-5">
-          {techStack.map((tools) => (
+          {techStack?.map((tools) => (
             <TechStack tools={tools} />
           ))}
         </ul>
-        <LinkButtons
-          codeLink={codeLink}
-          projectURL={projectURL}
-          projectCode={projectCode}
-        />
+        {(projectURL || projectCode) && (
+          <LinkButtons
+            codeLink={codeLink}
+            projectURL={projectURL}
+            projectCode={projectCode}
+          />
+        )}
       </div>
     </div>
   );
