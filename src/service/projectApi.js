@@ -3,7 +3,7 @@ export async function getProject() {
   const { data, error } = await supabase
     .from("portfolio")
     .select("*")
-    .order("id", { ascending: true });
+    .order("order", { ascending: true });
 
   if (error) {
     console.error(error);

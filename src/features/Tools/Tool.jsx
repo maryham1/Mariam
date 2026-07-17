@@ -2,6 +2,10 @@ import { useInView } from "../hook/useInView";
 
 const tools = [
   {
+    img: "/Tool/nextjs.svg",
+    name: "Nextjs",
+  },
+  {
     img: "/Tool/react.svg",
     name: "React",
   },
@@ -20,6 +24,10 @@ const tools = [
   {
     img: "/Tool/styledcomponet.svg",
     name: "Styled Component",
+  },
+  {
+    img: "/Tool/typescript.svg",
+    name: "Typescript",
   },
   {
     img: "/Tool/js.svg",

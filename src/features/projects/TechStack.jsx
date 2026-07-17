@@ -1,5 +1,6 @@
 import { SiTailwindcss, SiRedux, SiJavascript, SiHtml5 } from "react-icons/si";
 import { FaReact, FaRoute, FaCss3Alt } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 
 function TechStack({ tools }) {
   const { icon } = tools;
@@ -20,6 +21,8 @@ function TechStack({ tools }) {
     return (
       <SiJavascript className="text-yellow-600 text-2xl laptop:text-4xl" />
     );
+  if (icon === "nextjs")
+    return <SiNextdotjs className="text-[#FFFFFF] text-2xl laptop:text-4xl" />;
   return <li className="flex gap-10 flex-row w-[400px] ">{icon}</li>;
 }
 
